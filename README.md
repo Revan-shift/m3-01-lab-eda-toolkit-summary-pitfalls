@@ -110,32 +110,6 @@ Answer the following in a markdown cell:
 - Which statistics changed the most? Which were robust?
 - If you were reporting a "typical" value for the modified dataset, would you choose the mean or the median? Why?
 
-### Task 4: The Identical-Stats Challenge (Anscombe-Style)
-
-Construct **two datasets** (200 observations each) that have:
-- The **same mean** (within ±0.5)
-- The **same standard deviation** (within ±0.5)
-- **Visually different** distributions (e.g., one uniform and one bimodal, or one normal and one with a gap)
-
-Hint: You can generate one dataset freely, compute its mean and standard deviation, then engineer the second dataset to match those statistics while having a different shape. Numpy's random generators and simple arithmetic transformations will help.
-
-Display the summary statistics side-by-side to prove they match, then plot both distributions as overlapping KDE curves on the same axes.
-
-**Guiding question:** If someone handed you only the mean and standard deviation, could you reconstruct the distribution? What additional information would you need?
-
-### Task 5: Real-Data Mini-EDA
-
-Load a small built-in or well-known dataset (for example, the `tips` dataset from Seaborn or Iris from scikit-learn) and run through a quick EDA:
-
-1. Compute descriptive statistics for every numerical column using `.describe()` plus skewness.
-2. Create a grid of histograms (one per numerical column) with KDE overlays.
-3. Create a grid of boxplots grouped by a categorical variable (e.g., `day` or `species`).
-4. Identify at least **one column** where the mean is a misleading summary and explain why in a markdown cell.
-
-### Task 6: Reflection — Your EDA Checklist
-
-In a final markdown cell, write a personal **EDA checklist** (5–8 bullet points) that you would follow every time you receive a new dataset. Your checklist should incorporate the lessons from this lab — for example, when to distrust the mean, when to look beyond summary stats, and which plots to create first.
-
 ## Submission
 
 ### What to submit
@@ -144,11 +118,10 @@ In a final markdown cell, write a personal **EDA checklist** (5–8 bullet point
 
 ### Definition of done (checklist)
 
-- [ ] All six tasks are completed with code and outputs visible.
+- [ ] All three tasks are completed with code and outputs visible.
 - [ ] Each task includes at least one markdown cell explaining observations.
 - [ ] Plots are properly labeled with titles, axis labels, and legends where appropriate.
-- [ ] The Identical-Stats Challenge datasets have demonstrably matching statistics but different shapes.
-- [ ] The EDA Checklist in Task 6 contains at least 5 actionable items.
+- [ ] The outlier stress test shows clear before/after comparison with interpretation.
 - [ ] The notebook runs top-to-bottom without errors (`Kernel → Restart & Run All`).
 
 ### How to submit (Git workflow)
